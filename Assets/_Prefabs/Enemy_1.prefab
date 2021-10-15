@@ -256,8 +256,8 @@ MonoBehaviour:
   speed: 10
   projectilePrefab: {fileID: 1899541879965282, guid: 965bc7df8fc034266bc574f9721c4f56,
     type: 3}
-  fireRate: 0.3
-  health: 10
+  fireRate: 0.00001
+  health: 1
   score: 100
   showDamageDuration: 0.1
   powerUpDropChance: 0.5

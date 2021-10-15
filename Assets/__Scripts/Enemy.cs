@@ -114,6 +114,10 @@ public class Enemy : MonoBehaviour {
             default:
                 print("Enemy hit by non-ProjectileHero: " + otherGO.name);
                 break;
+
+            case "ProjectileEnemy":
+                
+            break;
         }
     }
 
