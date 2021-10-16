@@ -17,7 +17,7 @@ public class Hero : MonoBehaviour {
 
     [Header("Set Dynamically")]
     [SerializeField]
-    public float _shieldLevel = 1;
+    public float _shieldLevel = 1; // This is essentially the player's health. If it goes negative the game is over.
 
     // This variable holds a reference to the last triggering GameObject
     private GameObject lastTriggerGo = null;
@@ -128,7 +128,7 @@ public class Hero : MonoBehaviour {
         pu.AbsorbedBy(gameObject);
     }
 
-    public float shieldLevel
+    public float shieldLevel // a getter and setter method
     {
         get
         {

@@ -6,6 +6,7 @@ public class Enemy : MonoBehaviour {
 
     [Header("Set in Inspector: Enemy")]
     public float speed = 10f; // The speed in m/s
+    public GameObject projectilePrefab;
     public float fireRate = 0.3f; // Seconds/shot (Unused)
     public float health = 10;
     public int score = 100; // Points earned for destroying this
@@ -60,6 +61,15 @@ public class Enemy : MonoBehaviour {
             // We're off the bottom, so destroy this GameObject
             Destroy(gameObject);
         }
+
+        EnemyAttack();
+    }
+
+    void EnemyAttack() {
+        GameObject projGO = Instantiate<GameObject>(projectilePrefab);
+        projGO.transform.position = transform.position;
+        Rigidbody rigidB = projGO.GetComponent<Rigidbody>();
+        rigidB.velocity = Vector3.down * fireRate;
     }
 
     public virtual void Move()
